@@ -1,14 +1,16 @@
-import { Component } from "react";
+import { Component } from 'react';
+import { TScore } from '../../types/types';
 
-const totalCount = 0;
-const correctCount = 0;
-
-export class ClassFinalScore extends Component {
+export class ClassFinalScore extends Component<{
+  finalScore: TScore;
+}> {
   render() {
+    const { incorrectCount, correctCount } = this.props.finalScore;
+    const totalCount = incorrectCount + correctCount;
     return (
-      <div id="final-score">
+      <div id='final-score'>
         <h1>Your Final Score Was</h1>
-        <div id="score">
+        <div id='score'>
           <p>{correctCount}</p>
           <hr />
           <p>{totalCount}</p>
