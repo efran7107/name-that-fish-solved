@@ -1,11 +1,9 @@
 import { Component } from 'react';
 import './styles/score-board.css';
-import { TScore } from '../../types/types';
+import { ScoreBoardProp } from '../../types/types';
 
 const answersLeft = ['trout', 'salmon', 'tuna', 'shark'];
-export class ClassScoreBoard extends Component<{
-	currentScore: TScore;
-}> {
+export class ClassScoreBoard extends Component<ScoreBoardProp> {
 	render() {
 		const { incorrectCount, correctCount } = this.props.currentScore;
 		const totalCount = incorrectCount + correctCount;
