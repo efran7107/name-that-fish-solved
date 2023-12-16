@@ -1,12 +1,16 @@
 import './styles/game-board.css';
 import { Images } from '../../assets/Images';
-import { TInitialFishes } from '../../types/types';
 import { TScore } from '../../types/types';
 import { useState } from 'react';
 
 export type GameBoardProp = {
   currentScore: TScore;
   handleScore: (currentScore: TScore) => void;
+};
+
+export type TInitialFishes = {
+  name: string;
+  url: string;
 };
 
 const initialFishes: TInitialFishes[] = [

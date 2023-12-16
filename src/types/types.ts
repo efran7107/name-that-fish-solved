@@ -3,10 +3,6 @@ export type TScore = {
 	correctCount: number;
 };
 
-export type TInitialFishes = {
-	name: string;
-	url: string;
-};
 
 
 
