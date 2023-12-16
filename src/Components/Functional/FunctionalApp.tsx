@@ -15,7 +15,7 @@ export function FunctionalApp() {
         <FunctionalGameBoard currentScore={currentScore} handleScore={(currentScore) => setCurrentScore(currentScore)} />
       </div>
 
-      {total === 4 ? <FunctionalFinalScore currentScore={currentScore} /> : null}
+      {total === 4 ? <FunctionalFinalScore finalScore={currentScore} /> : null}
     </>
   );
 }
